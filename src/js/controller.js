@@ -1,4 +1,9 @@
 import icons from '../img/icons.svg';
+// to support older browsers
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
+
 console.log(icons);
 const recipeContainer = document.querySelector('.recipe');
 
