@@ -53,6 +53,7 @@ export const loadSearchResults = async function (query) {
     }
 };
 
+
 export const getSearchResultsPage = function (page = state.search.page) {
 
     state.search.page = page;
@@ -60,6 +61,15 @@ export const getSearchResultsPage = function (page = state.search.page) {
     const end = page * state.search.resultPerPage;
     return state.search.results.slice(start, end);
 }
+
+export const updateServings = function (newServings) {
+    state.recipe.ingredients.forEach(ing => {
+        ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
+    });
+
+    state.recipe.servings = newServings;
+};
+
 
 loadSearchResults()
 // loadSearchResults('coffee')
