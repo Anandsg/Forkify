@@ -35,7 +35,7 @@ class RecipeView extends view {
       </svg>
       <span class="recipe__info-data recipe__info-data--people">${this._data.servings}</span>
       <span class="recipe__info-text">${this._data.servings}</span>
-
+      </div>
       <div class="recipe__info-buttons">
         <button class="btn--tiny btn--increase-servings">
           <svg>
